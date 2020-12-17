@@ -1,0 +1,15 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<table class="table">
+    @foreach(var g in Model.Games)
+    {
+        <tr>
+            <td>@g.Name</td>
+            <td><a asp-page="Detail" asp-route-id="@g.Id">Detail</a></td>
+        </tr>
+    }
+</table>
